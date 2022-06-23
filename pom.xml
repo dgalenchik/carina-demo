@@ -10,7 +10,6 @@
 	<packaging>jar</packaging>
 	<name>CarinaDemo</name>
 	<url>https://qaprosoft.com</url>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<carina-core_version>7.3.20</carina-core_version>
