@@ -1,0 +1,6 @@
+{
+  "userId": 1,
+  "id": 101,
+  <#if title??>"title": "${title}",</#if>
+  "body": " Test post body"
+}
