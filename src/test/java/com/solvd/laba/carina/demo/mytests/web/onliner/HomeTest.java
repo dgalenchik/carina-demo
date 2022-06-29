@@ -1,9 +1,12 @@
 package com.solvd.laba.carina.demo.mytests.web.onliner;
 
 import com.qaprosoft.carina.core.foundation.AbstractTest;
+import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.solvd.laba.carina.demo.gui.web.pages.*;
 import com.solvd.laba.carina.demo.gui.web.services.Search;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class HomeTest extends AbstractTest {
 
@@ -45,7 +48,7 @@ public class HomeTest extends AbstractTest {
     }
 
     @Test
-    public void testOpenPages(){
+    public void testOpenPages() {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
         homePage.clickAutoSellLink();
@@ -58,6 +61,18 @@ public class HomeTest extends AbstractTest {
         homePage.open();
         ForumPage forumPage = homePage.clickForumLink();
         assert forumPage.isPageOpened();
+    }
+
+    @Test
+    public void testFooter() {
+        FooterPage footerPage = new FooterPage(getDriver());
+        footerPage.open();
+        List<ExtendedWebElement> footerLinks = footerPage.getFooterLinks();
+        footerLinks.forEach(f -> {
+            assert f.isElementPresent();
+            f.click();
+            footerPage.open();
+        });
     }
 }
 
