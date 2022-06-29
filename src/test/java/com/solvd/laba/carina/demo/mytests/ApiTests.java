@@ -1,4 +1,4 @@
-package com.solvd.laba.carina.demo;
+package com.solvd.laba.carina.demo.mytests;
 
 import com.qaprosoft.apitools.validation.JsonCompareKeywords;
 import com.qaprosoft.carina.core.foundation.IAbstractTest;
@@ -19,7 +19,7 @@ import java.net.http.HttpHeaders;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DemoTest implements IAbstractTest {
+public class ApiTests implements IAbstractTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
 //    @Test
