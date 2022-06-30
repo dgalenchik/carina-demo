@@ -13,12 +13,14 @@ public class FooterOpener extends AbstractTest {
         footerPage.open();
         AboutCompanyPage aboutCompanyPage = footerPage.clickAboutCompanyLink();
         AdvertisePage advertisePage = footerPage.clickAdvertiseLink();
+        footerPage.open();
         ConfidentialPolicyPage confidentialPolicyPage = footerPage.clickConfidentialPolicyLink();
         ManifestPage manifestPage = footerPage.clickManifestLink();
         PublicContractPage publicContractPage = footerPage.clickPublicContractLink();
         RedactionContactsPage redactionContactsPage = footerPage.clickRedactionContactLink();
         RulesOfReturnPage rulesOfReturnPage = footerPage.clickRulesOfReturnLink();
         TariffsPage tariffsPage = footerPage.clickTariffsLink();
+        footerPage.open();
         UserAgreementPage userAgreementPage = footerPage.clickUserAgreementLink();
         UserSupportPage userSupportPage = footerPage.clickUserSupportLink();
         VacanciesPage vacanciesPage = footerPage.clickVacanciesLink();

@@ -10,7 +10,7 @@ public class NewsPage extends AbstractPage {
     @FindBy(xpath = "//*[@class=\"g-middle-i\"]")
     private ExtendedWebElement title;
 
-    @FindBy(xpath = "(//div[@class=\"widget-item\"]/*[@class=\"b-tile-main\"])[3]")
+    @FindBy(xpath = "(//header[@class=\"b-main-page-blocks-header-2 cfix\"])[1]/*[1]")
     private ExtendedWebElement fanCatalogLink;
 
     public NewsPage(WebDriver driver) {

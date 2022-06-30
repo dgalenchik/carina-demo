@@ -3,6 +3,8 @@ package com.solvd.laba.carina.demo.mytests.web.onliner;
 import com.qaprosoft.carina.core.foundation.AbstractTest;
 import com.solvd.laba.carina.demo.gui.web.pages.*;
 import com.solvd.laba.carina.demo.gui.web.pages.auto.AudiPage;
+import com.solvd.laba.carina.demo.gui.web.pages.auto.BentleyPage;
+import com.solvd.laba.carina.demo.gui.web.pages.auto.HondaPage;
 import com.solvd.laba.carina.demo.gui.web.services.FooterOpener;
 import com.solvd.laba.carina.demo.gui.web.services.Search;
 import org.testng.annotations.Test;
@@ -80,6 +82,21 @@ public class HomeTest extends AbstractTest {
         homePage.open();
         LoginPage loginPage = homePage.clickLoginBtn();
         assert loginPage.isPageOpened();
+    }
+    @Test
+    public void testBentleySearch(){
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        AutoSellPage autoSellPage = homePage.clickAutoSellLink();
+        BentleyPage bentleySearch = autoSellPage.getBentleySearch(100);
+        assert bentleySearch.isPageOpened();
+    }    @Test
+    public void testHondaSearch(){
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        AutoSellPage autoSellPage = homePage.clickAutoSellLink();
+        HondaPage hondaSearch = autoSellPage.getHondaSearch(100);
+        assert hondaSearch.isPageOpened();
     }
 }
 

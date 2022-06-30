@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class FanPage extends AbstractPage {
 
-    @FindBy(xpath = "//*[@class=\"schema-header__title js-schema-header_title\"]")
+    @FindBy(xpath = "//*[@class=\"catalog-navigation__title\"]")
     private ExtendedWebElement title;
 
     public FanPage(WebDriver driver) {

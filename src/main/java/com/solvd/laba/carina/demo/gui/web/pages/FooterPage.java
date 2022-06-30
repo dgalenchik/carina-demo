@@ -83,19 +83,5 @@ public class FooterPage extends AbstractPage {
         vacanciesLink.click();
         return new VacanciesPage(getDriver());
     }
-    public List<ExtendedWebElement> getFooterLinks(){
-        List<ExtendedWebElement> list = new ArrayList<>();
-        list.add(aboutCompanyLink);
-        list.add(advertiseLink);
-        list.add(confidentialPolicyLink);
-        list.add(manifestLink);
-        list.add(publicContractLink);
-        list.add(redactionContactsLink);
-        list.add(rulesOfReturnLink);
-        list.add(tariffsLink);
-        list.add(userAgreementLink);
-        list.add(userSupportLink);
-        list.add(vacanciesLink);
-        return list;
-    }
+
 }
