@@ -13,10 +13,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class AutoSellPage extends AbstractPage {
     public static final Logger LOGGER = LogManager.getLogger(AutoSellPage.class);
-    @FindBy(xpath = "//*[@id=\"container\"]/div/div/div/div/div/div[2]/div/div/div[3]/div/div[2]/div[2]/div[2]/div[2]/div/div[2]/div[1]/div/div/div[1]/div/div[1]/div[2]")
-    private ExtendedWebElement searchField;
-    @FindBy(css = "input.input-style_small")
-    private ExtendedWebElement searchFieldPopup;
     @FindBy(css = "//*[@class=\"vehicle-form__title vehicle-form__title_big-alter\"]")
     private ExtendedWebElement title;
 
