@@ -1,16 +1,16 @@
-package com.solvd.laba.carina.demo.gui.web.pages.footer;
+package com.solvd.laba.carina.demo.gui.web.pages;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
-public class AdvertisePage extends AbstractPage {
+public class LoginPage extends AbstractPage {
 
-    @FindBy(xpath = "//*[@class=\"news-header__title\"]")
+    @FindBy(xpath = "//div[@class=\"auth-form__header\"]")
     private ExtendedWebElement title;
 
-    public AdvertisePage(WebDriver driver) {
+    public LoginPage(WebDriver driver) {
         super(driver);
     }
 

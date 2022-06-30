@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class UserSupportPage extends AbstractPage {
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@class=\"news-header__title\"]")
     private ExtendedWebElement title;
 
     public UserSupportPage(WebDriver driver) {

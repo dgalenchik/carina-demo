@@ -29,6 +29,9 @@ public class HomePage extends AbstractPage {
     @FindBy(xpath = "//span[@class=\"b-main-navigation__text\"][text()='Форум']")
     private ExtendedWebElement forumLink;
 
+    @FindBy(xpath = "//div[@class=\"auth-bar__item auth-bar__item--text\"]")
+    private ExtendedWebElement loginBtn;
+
     public HomePage(WebDriver driver) {
         super(driver);
         setPageAbsoluteURL(R.CONFIG.get(Configuration.Parameter.URL.getKey()));
@@ -58,12 +61,20 @@ public class HomePage extends AbstractPage {
         servicesLink.click();
         return new ServicesPage(getDriver());
     }
-    public BaraholkaPage clickBaraholkaLink(){
-     baraholkaLink.click();
-     return new BaraholkaPage(getDriver());
+
+    public BaraholkaPage clickBaraholkaLink() {
+        baraholkaLink.click();
+        return new BaraholkaPage(getDriver());
     }
-    public ForumPage clickForumLink(){
+
+    public ForumPage clickForumLink() {
         forumLink.click();
         return new ForumPage(getDriver());
+    }
+
+    public LoginPage clickLoginBtn() {
+        loginBtn.click();
+        return new LoginPage(getDriver());
+
     }
 }

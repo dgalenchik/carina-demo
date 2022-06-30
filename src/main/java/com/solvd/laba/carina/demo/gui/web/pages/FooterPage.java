@@ -20,7 +20,7 @@ public class FooterPage extends AbstractPage {
     private ExtendedWebElement confidentialPolicyLink;
     @FindBy(xpath = "//*[@class=\"footer-style__item\"][4]")
     private ExtendedWebElement manifestLink;
-    @FindBy(xpath = "//*[@class=\"footer-style__item\"][5]")
+    @FindBy(xpath = "//*[@class=\"footer-style__item\"][4]")
     private ExtendedWebElement publicContractLink;
     @FindBy(xpath = "//*[@class=\"footer-style__item\"][6]")
     private ExtendedWebElement redactionContactsLink;

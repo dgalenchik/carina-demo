@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class RulesOfReturnPage extends AbstractPage {
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@class=\"news-header__title\"]")
     private ExtendedWebElement title;
 
     public RulesOfReturnPage(WebDriver driver) {

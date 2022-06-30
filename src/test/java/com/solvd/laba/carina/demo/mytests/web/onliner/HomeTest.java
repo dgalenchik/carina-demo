@@ -1,12 +1,12 @@
 package com.solvd.laba.carina.demo.mytests.web.onliner;
 
 import com.qaprosoft.carina.core.foundation.AbstractTest;
-import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.solvd.laba.carina.demo.gui.web.pages.*;
+import com.solvd.laba.carina.demo.gui.web.pages.auto.AudiPage;
+import com.solvd.laba.carina.demo.gui.web.services.FooterOpener;
 import com.solvd.laba.carina.demo.gui.web.services.Search;
 import org.testng.annotations.Test;
-
-import java.util.List;
+import org.testng.asserts.SoftAssert;
 
 public class HomeTest extends AbstractTest {
 
@@ -65,14 +65,20 @@ public class HomeTest extends AbstractTest {
 
     @Test
     public void testFooter() {
-        FooterPage footerPage = new FooterPage(getDriver());
-        footerPage.open();
-        List<ExtendedWebElement> footerLinks = footerPage.getFooterLinks();
-        footerLinks.forEach(f -> {
-            assert f.isElementPresent();
-            f.click();
-            footerPage.open();
-        });
+        FooterOpener footerOpener = new FooterOpener();
+        footerOpener.testFooterPages();
+    }
+    @Test
+    public void autoBaraholkaTest(){
+    Search search = new Search();
+    search.testCarRatings();
+    }
+    @Test
+    public void testLogin(){
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        LoginPage loginPage = homePage.clickLoginBtn();
+        assert loginPage.isPageOpened();
     }
 }
 
