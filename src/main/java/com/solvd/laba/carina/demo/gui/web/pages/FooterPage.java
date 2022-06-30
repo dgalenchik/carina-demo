@@ -14,25 +14,25 @@ import java.util.List;
 public class FooterPage extends AbstractPage {
     @FindBy(xpath = "//*[@class=\"footer-style__item\"][1]")
     private ExtendedWebElement aboutCompanyLink;
-    @FindBy(xpath = "//*[@class=\"footer-style__item\"][2]")
-    private ExtendedWebElement advertiseLink;
     @FindBy(xpath = "//*[@class=\"footer-style__item\"][3]")
-    private ExtendedWebElement confidentialPolicyLink;
-    @FindBy(xpath = "//*[@class=\"footer-style__item\"][4]")
-    private ExtendedWebElement manifestLink;
-    @FindBy(xpath = "//*[@class=\"footer-style__item\"][4]")
-    private ExtendedWebElement publicContractLink;
-    @FindBy(xpath = "//*[@class=\"footer-style__item\"][6]")
-    private ExtendedWebElement redactionContactsLink;
-    @FindBy(xpath = "//*[@class=\"footer-style__item\"][7]")
-    private ExtendedWebElement rulesOfReturnLink;
-    @FindBy(xpath = "//*[@class=\"footer-style__item\"][8]")
-    private ExtendedWebElement tariffsLink;
+    private ExtendedWebElement advertiseLink;
     @FindBy(xpath = "//*[@class=\"footer-style__item\"][9]")
+    private ExtendedWebElement confidentialPolicyLink;
+    @FindBy(xpath = "//*[@class=\"footer-style__item\"][6]")
+    private ExtendedWebElement manifestLink;
+    @FindBy(xpath = "//*[@class=\"footer-style__item\"][8]")
+    private ExtendedWebElement publicContractLink;
+    @FindBy(xpath = "//*[@class=\"footer-style__item\"][2]")
+    private ExtendedWebElement redactionContactsLink;
+    @FindBy(xpath = "//*[@class=\"footer-style__item\"][11]")
+    private ExtendedWebElement rulesOfReturnLink;
+    @FindBy(xpath = "//*[@class=\"footer-style__item\"][4]")
+    private ExtendedWebElement tariffsLink;
+    @FindBy(xpath = "//*[@class=\"footer-style__item\"][7]")
     private ExtendedWebElement userAgreementLink;
     @FindBy(xpath = "//*[@class=\"footer-style__item\"][10]")
     private ExtendedWebElement userSupportLink;
-    @FindBy(xpath = "//*[@class=\"footer-style__item\"][11]")
+    @FindBy(xpath = "//*[@class=\"footer-style__item\"][5]")
     private ExtendedWebElement vacanciesLink;
 
     public FooterPage(WebDriver driver) {

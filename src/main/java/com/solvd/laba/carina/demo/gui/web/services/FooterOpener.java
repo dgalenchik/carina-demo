@@ -3,32 +3,35 @@ package com.solvd.laba.carina.demo.gui.web.services;
 import com.qaprosoft.carina.core.foundation.AbstractTest;
 import com.solvd.laba.carina.demo.gui.web.pages.FooterPage;
 import com.solvd.laba.carina.demo.gui.web.pages.footer.*;
+import org.testng.asserts.SoftAssert;
 
 public class FooterOpener extends AbstractTest {
 
     public void testFooterPages() {
+        SoftAssert softAssert = new SoftAssert();
         FooterPage footerPage = new FooterPage(getDriver());
         footerPage.open();
         AboutCompanyPage aboutCompanyPage = footerPage.clickAboutCompanyLink();
-        footerPage.open();
         AdvertisePage advertisePage = footerPage.clickAdvertiseLink();
-        footerPage.open();
         ConfidentialPolicyPage confidentialPolicyPage = footerPage.clickConfidentialPolicyLink();
-        footerPage.open();
         ManifestPage manifestPage = footerPage.clickManifestLink();
-        footerPage.open();
         PublicContractPage publicContractPage = footerPage.clickPublicContractLink();
-        footerPage.open();
         RedactionContactsPage redactionContactsPage = footerPage.clickRedactionContactLink();
-        footerPage.open();
         RulesOfReturnPage rulesOfReturnPage = footerPage.clickRulesOfReturnLink();
-        footerPage.open();
         TariffsPage tariffsPage = footerPage.clickTariffsLink();
-        footerPage.open();
         UserAgreementPage userAgreementPage = footerPage.clickUserAgreementLink();
-        footerPage.open();
         UserSupportPage userSupportPage = footerPage.clickUserSupportLink();
-        footerPage.open();
         VacanciesPage vacanciesPage = footerPage.clickVacanciesLink();
+        softAssert.assertTrue(aboutCompanyPage.isPageOpened());
+        softAssert.assertTrue(advertisePage.isPageOpened());
+        softAssert.assertTrue(confidentialPolicyPage.isPageOpened());
+        softAssert.assertTrue(manifestPage.isPageOpened());
+        softAssert.assertTrue(publicContractPage.isPageOpened());
+        softAssert.assertTrue(redactionContactsPage.isPageOpened());
+        softAssert.assertTrue(rulesOfReturnPage.isPageOpened());
+        softAssert.assertTrue(tariffsPage.isPageOpened());
+        softAssert.assertTrue(userAgreementPage.isPageOpened());
+        softAssert.assertTrue(userSupportPage.isPageOpened());
+        softAssert.assertTrue(vacanciesPage.isPageOpened());
     }
 }

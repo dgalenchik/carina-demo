@@ -49,18 +49,19 @@ public class HomeTest extends AbstractTest {
 
     @Test
     public void testOpenPages() {
+        SoftAssert softAssert = new SoftAssert();
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
-        homePage.clickAutoSellLink();
-        homePage.open();
-        homePage.clickHosesLink();
-        homePage.open();
-        homePage.clickBaraholkaLink();
-        homePage.open();
-        homePage.clickServicesLink();
-        homePage.open();
+        AutoSellPage autoSellPage = homePage.clickAutoSellLink();
+        HousesPage housesPage = homePage.clickHosesLink();
+        BaraholkaPage baraholkaPage = homePage.clickBaraholkaLink();
+        ServicesPage servicesPage = homePage.clickServicesLink();
         ForumPage forumPage = homePage.clickForumLink();
-        assert forumPage.isPageOpened();
+        softAssert.assertTrue(autoSellPage.isPageOpened());
+        softAssert.assertTrue(housesPage.isPageOpened());
+        softAssert.assertTrue(baraholkaPage.isPageOpened());
+        softAssert.assertTrue(servicesPage.isPageOpened());
+        softAssert.assertTrue(forumPage.isPageOpened());
     }
 
     @Test
@@ -71,7 +72,7 @@ public class HomeTest extends AbstractTest {
     @Test
     public void autoBaraholkaTest(){
     Search search = new Search();
-    search.testCarRatings();
+    search.testCarRatings(500);
     }
     @Test
     public void testLogin(){
