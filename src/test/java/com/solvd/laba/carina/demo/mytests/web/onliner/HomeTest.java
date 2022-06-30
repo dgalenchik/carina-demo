@@ -74,7 +74,7 @@ public class HomeTest extends AbstractTest {
     @Test
     public void autoBaraholkaTest(){
     Search search = new Search();
-    search.testCarRatings(500);
+    search.testCarRatings(800);
     }
     @Test
     public void testLogin(){
