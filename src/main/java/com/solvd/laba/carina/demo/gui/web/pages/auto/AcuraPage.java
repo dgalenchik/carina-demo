@@ -2,6 +2,7 @@ package com.solvd.laba.carina.demo.gui.web.pages.auto;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
+import com.solvd.laba.carina.demo.gui.web.pages.AutoSellPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
@@ -25,5 +26,8 @@ public class AcuraPage extends AbstractPage implements IRating {
     public float getRating() {
         return Float.valueOf(rating.getText().replaceAll(",","."));
     }
+
+
+
 }
 
